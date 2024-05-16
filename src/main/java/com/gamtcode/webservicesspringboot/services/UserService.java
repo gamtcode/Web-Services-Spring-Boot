@@ -1,6 +1,7 @@
 package com.gamtcode.webservicesspringboot.services;
 
 import com.gamtcode.webservicesspringboot.entities.User;
+import com.gamtcode.webservicesspringboot.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.gamtcode.webservicesspringboot.repositories.UserRepository;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ public class UserService {
 
     public User findById(Long id) {
         Optional<User> obj = repository.findById(id);
-        return obj.get();
+        return obj.orElseThrow(() -> new ResourceNotFoundException(id));
     }
 
     public User insert(User obj) {
