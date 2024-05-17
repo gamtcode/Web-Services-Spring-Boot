@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.gamtcode</groupId>
-    <artifactId>Web-Services-Spring-Boot</artifactId>
+    <artifactId>Web-Services-Spring-Boot-JPA</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Web-Services-Spring-Boot</name>
     <description>Web-Services-Spring-Boot</description>
