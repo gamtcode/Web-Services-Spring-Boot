@@ -39,9 +39,16 @@
             <scope>runtime</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
+        <finalName>sbapp1</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

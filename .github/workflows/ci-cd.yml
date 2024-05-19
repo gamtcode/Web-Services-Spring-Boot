@@ -1,0 +1,30 @@
+name: Deploy to Elastic Beanstalk
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Build Project
+        run: mvn clean install -DskipTests
+      - name: Beanstalk Deploy for JAR
+        uses: DylanBDev/beanstalk-deploy@initial
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: 'sbapp1'
+          environment_name: 'Sbapp1-env'
+          version_label: ${{ github.sha }}
+          region: sa-east-1
+          deployment_package: target/sbapp1.jar
