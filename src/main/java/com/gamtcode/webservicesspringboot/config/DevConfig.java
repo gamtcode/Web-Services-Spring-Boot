@@ -37,11 +37,11 @@ public class DevConfig implements CommandLineRunner {
         Category cat2 = new Category(null, "Books");
         Category cat3 = new Category(null, "Computers");
 
-        Product p1 = new Product(null, "The Lord of the Rings", "Lorem ipsum dolor sit amet, consectetur.", 90.5, "");
-        Product p2 = new Product(null, "Smart TV", "Nulla eu imperdiet purus. Maecenas ante.", 2190.0, "");
-        Product p3 = new Product(null, "Macbook Pro", "Nam eleifend maximus tortor, at mollis.", 1250.0, "");
-        Product p4 = new Product(null, "PC Gamer", "Donec aliquet odio ac rhoncus cursus.", 1200.0, "");
-        Product p5 = new Product(null, "Rails for Dummies", "Cras fringilla convallis sem vel faucibus.", 100.99, "");
+        Product p1 = new Product(null, "The Lord of the Rings", "Immerse yourself in the epic fantasy world of Middle Earth with this classic novel.", 90.5, "");
+        Product p2 = new Product(null, "Smart TV", "Experience stunning 4K visuals and smart features for an ultimate entertainment experience.", 2190.0, "");
+        Product p3 = new Product(null, "Macbook Pro", "Unleash your productivity with high performance, sleek design, and the best of Apple's software.", 1250.0, "");
+        Product p4 = new Product(null, "PC Gamer", "Get the edge in your games with high frame rates and ultra settings.", 1200.0, "");
+        Product p5 = new Product(null, "Rails for Dummies", "Learn to build web applications quickly and easily with this beginner's guide to Rails.", 100.99, "");
 
         categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
         productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
@@ -55,8 +55,8 @@ public class DevConfig implements CommandLineRunner {
 
         productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
 
-        User u1 = new User(null, "Maria Brown", "maria@gmail.com", "988888888", "123456");
-        User u2 = new User(null, "Alex Green", "alex@gmail.com", "977777777", "123456");
+        User u1 = new User(null, "Frédéric Chopin", "chopin@gmail.com", "(12) 98888-5555", "1234abcd");
+        User u2 = new User(null, "Keiko Matsui", "keiko@gmail.com", "(12) 98888-7777", "1234wxyz");
 
         Order o1 = new Order(null, Instant.parse("2019-06-20T19:53:07Z"), OrderStatus.PAID, u1);
         Order o2 = new Order(null, Instant.parse("2019-07-21T03:42:10Z"), OrderStatus.WAITING_PAYMENT, u2);
