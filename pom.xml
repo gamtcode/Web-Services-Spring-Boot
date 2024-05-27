@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.gamtcode</groupId>
-    <artifactId>Web-Services-Spring-Boot-JPA</artifactId>
+    <artifactId>ecommerce-spring-boot-jpa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Web-Services-Spring-Boot-JPA</name>
-    <description>Web-Services-Spring-Boot-JPA</description>
+    <name>Ecommerce Project with Spring Boot and JPA</name>
+    <description>This is an ecommerce project built with Spring Boot and JPA.</description>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -48,7 +48,7 @@
     </dependencies>
 
     <build>
-        <finalName>sbapp1</finalName>
+        <finalName>ecommerce2</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

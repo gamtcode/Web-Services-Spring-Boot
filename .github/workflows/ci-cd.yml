@@ -23,8 +23,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: 'sbapp1'
-          environment_name: 'Sbapp1-env'
+          application_name: 'ecommerce2'
+          environment_name: 'Ecommerce2-env3'
           version_label: ${{ github.sha }}
           region: sa-east-1
-          deployment_package: target/sbapp1.jar
+          deployment_package: target/ecommerce2.jar
