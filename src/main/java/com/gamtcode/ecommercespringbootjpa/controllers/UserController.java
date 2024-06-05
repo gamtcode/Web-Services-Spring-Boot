@@ -10,7 +10,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "https://ecommerce.guilhermeteixeira.dev"})
 @RestController
 @RequestMapping(value = "/users")
 public class UserController {
